@@ -1,26 +1,47 @@
 import styled from 'styled-components';
 import React from 'react';
 
+const A = [
+  {
+    title : "ももちゃん🍑@momochanjazz",
+    content : "React勉強しなきゃ、、"
+  },
+  {
+    title : "M.E@valorant",
+    content : "バロラント最高！"
+  },  
+  {
+    title : "おせんべい@ricecookie",
+    content : "お腹すいたなあ…🥺"
+  },
+  {
+    title : "a",
+    content : "あいうえお"
+  },
+  {
+    title : "b",
+    content : "かきくけこ"
+  },
+]
 
 const App = () => {
   return (
       <div className="App">
         <h1>Twitter🕊</h1>
-        <Tweet
-          title="ももちゃん🍑@momochanjazz"
-          content="React勉強しなきゃ、、"
-        />
-        <Tweet
-          title="M.E@valorant"
-          content="バロラント最高！"
-        />
-        <Tweet
-          title="おせんべい@ricecookie"
-          content="お腹すいたなあ…🥺"
-        />
+        {
+          A.map(t => <Tweet
+            title={t.title}
+            content={t.content}
+          />)
+        }
       </div>
   );
 };
+
+const abc = {
+  title : "ももちゃん🍑@momochanjazz",
+  content : "React勉強しなきゃ、、"
+}
 
 interface TodoProps {
   title: string
